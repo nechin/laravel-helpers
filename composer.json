@@ -1,0 +1,26 @@
+{
+    "name": "nechin/laravel-file-ext",
+    "description": "Added new method file_ext to Str facade",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Vitkalov",
+            "email": "nechin.va@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Nechin\\LaravelFileExt\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nechin\\LaravelFileExt\\FileExtServiceProvider"
+            ]
+        }
+    }
+}
