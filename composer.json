@@ -1,6 +1,6 @@
 {
     "name": "nechin/laravel-file-ext",
-    "description": "Added new method file_ext to Str facade",
+    "description": "Added new method fileExt to Str facade",
     "type": "project",
     "license": "MIT",
     "authors": [
