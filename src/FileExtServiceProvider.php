@@ -14,7 +14,7 @@ class FileExtServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Str::macro('file_ext', fn(string $path) => pathinfo($path, PATHINFO_EXTENSION));
+        Str::macro('fileExt', fn(string $path) => pathinfo($path, PATHINFO_EXTENSION));
     }
 
     /**
