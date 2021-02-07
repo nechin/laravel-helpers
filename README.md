@@ -1,3 +1,3 @@
-# Laravel package fileExt
+# Laravel package that adds a different extensions
 
-Added new method *fileExt* to Str facade, that return a file extension by file path
+Added new method *fileExt* to the __Str__ facade, that return a file extension by the file path
