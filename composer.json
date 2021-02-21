@@ -1,6 +1,6 @@
 {
-    "name": "nechin/laravel-file-ext",
-    "description": "Added new method fileExt to Str facade",
+    "name": "nechin/laravel-helpers",
+    "description": "Added new helper methods to a facades",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Nechin\\LaravelFileExt\\": "src/"
+            "Nechin\\LaravelHelpers\\": "src/"
         }
     },
     "minimum-stability": "dev",
@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Nechin\\LaravelFileExt\\FileExtServiceProvider"
+                "Nechin\\LaravelHelpers\\FileExtServiceProvider"
             ]
         }
     }
