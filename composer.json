@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Nechin\\LaravelHelpers\\FileExtServiceProvider"
+                "Nechin\\LaravelHelpers\\LaravelHelpersServiceProvider"
             ]
         }
     }

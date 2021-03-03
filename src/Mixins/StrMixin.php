@@ -1,6 +1,6 @@
 <?php
 
-namespace nechin\LaravelHelpers\Mixins;
+namespace Nechin\LaravelHelpers\Mixins;
 
 use Closure;
 
@@ -14,7 +14,7 @@ class StrMixin
     public function fileExt()
     {
         return function(string $path) {
-            pathinfo($path, PATHINFO_EXTENSION);
+            return pathinfo($path, PATHINFO_EXTENSION);
         };
     }
 }

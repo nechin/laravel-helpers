@@ -1,6 +1,6 @@
 <?php
 
-namespace nechin\LaravelHelpers\Mixins;
+namespace Nechin\LaravelHelpers\Mixins;
 
 use Closure;
 use Illuminate\Support\Facades\Route;
