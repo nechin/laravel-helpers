@@ -1,9 +1,9 @@
-# Laravel helpers for a facades
+# Laravel helpers for a different facades
 
-Method *fileExt* to the __Str__ facade, that return a file extension by the file path
+Method __fileExt__ to the *Str* facade, that return a file extension by the file path
 \Illuminate\Support\Str::fileExt('path\to\file.ext')
 
-Method *redirectMap* to the __Route__ facade, that adds the ability to specify a list of redirects
+Method __redirectMap__ to the *Route* facade, that adds the ability to specify a list of redirects
 
 \Illuminate\Routing\Route::redirectMap([
     '/from' => '/to'
