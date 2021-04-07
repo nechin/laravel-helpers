@@ -10,6 +10,13 @@ class RouteMixin
     /**
      * Define redirect map
      *
+     * <code>
+     * // routes/web.php
+     * \Illuminate\Routing\Route::redirectMap([
+     *     '/from' => '/to'
+     * ]);
+     * </code>
+     *
      * @return Closure
      */
     public function redirectMap()
