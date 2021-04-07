@@ -10,7 +10,7 @@ Method __randomParts__ for the *Str* facade, that return a string with random ge
 \Illuminate\Support\Str::randomParts(4, 5, '+'); // "RnHxg+R9i1r+3F3P8+HJ9FT"
 ```
 
-Method __redirectList__ for the *Route* facade, that adds the ability to specify a list of redirects
+Method __redirectList__ for the *Route* facade, that adds the ability to specify a list of a redirects
 
 ```php
 // routes/web.php
@@ -19,7 +19,7 @@ Method __redirectList__ for the *Route* facade, that adds the ability to specify
 ]);
 ```
 
-Method __delete__ for the *Arr* facade, that delete elements by value
+Method __delete__ for the *Arr* facade, that delete elements by the value
 ```php
 $array = [1, 2, 1, 3];
 \Illuminate\Support\Arr::delete($array, 1); // [2, 3]
