@@ -10,11 +10,11 @@ Method __randomParts__ for the *Str* facade, that return a string with random ge
 \Illuminate\Support\Str::randomParts(4, 5, '+'); // "RnHxg+R9i1r+3F3P8+HJ9FT"
 ```
 
-Method __redirectMap__ for the *Route* facade, that adds the ability to specify a list of redirects
+Method __redirectList__ for the *Route* facade, that adds the ability to specify a list of redirects
 
 ```php
 // routes/web.php
-\Illuminate\Routing\Route::redirectMap([
+\Illuminate\Routing\Route::redirectList([
     '/from' => '/to'
 ]);
 ```
