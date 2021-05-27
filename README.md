@@ -24,3 +24,5 @@ Method __delete__ for the *Arr* facade, that delete elements by the value
 $array = [1, 2, 1, 3];
 \Illuminate\Support\Arr::delete($array, 1); // [2, 3]
 ```
+
+Validator __unique_if__ in progress
