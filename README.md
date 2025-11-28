@@ -26,4 +26,7 @@ $array = [1, 2, 1, 3];
 ```
 
 Validator __unique_if__ in progress
+
 Arr __emptyAll__ in progress
+
+Arr __objToArray__ in progress
