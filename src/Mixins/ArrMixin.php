@@ -19,10 +19,13 @@ class ArrMixin
      */
     public function delete()
     {
-        return function(array $array, $needle, bool $strict = null) {
+        return function (array $array, $needle, bool $strict = false) {
             if (Arr::accessible($array)) {
-                foreach (array_keys($array, $needle, $strict) as $key) {
-                    unset($array[$key]);
+                foreach ($array as $key => $value) {
+                    $isMatch = $strict ? $value === $needle : $value == $needle;
+                    if ($isMatch) {
+                        unset($array[$key]);
+                    }
                 }
             }
 
@@ -31,7 +34,56 @@ class ArrMixin
     }
 
     /**
-     * Получение элемента массива, когда в массиве есть null
-     * Arr::take()
+     * Getting array elements by value
+     *
+     *  <code>
+     *  $array = [1, 2, 'second' => 1, 3];
+     *  \Illuminate\Support\Arr::pullAll($array, 1); // [0 => 1, 'second' => 1]
+     *  </code>
+     *
+     * @return Closure
      */
+    public function pullAll()
+    {
+        return function (array $array, mixed $needle, bool $strict = null) {
+            $searchArray = [];
+
+            if (Arr::accessible($array)) {
+                foreach ($array as $key => $value) {
+                    $isMatch = $strict ? $value === $needle : $value == $needle;
+                    if ($isMatch) {
+                        $searchArray[$key] = $value;
+                    }
+                }
+            }
+
+            return $searchArray;
+        };
+    }
+
+    /**
+     * Getting first array element by value
+     *
+     *  <code>
+     *  $array = [1, 2, 'second' => 1, 3];
+     *  \Illuminate\Support\Arr::pullFirst($array, 1); // [0 => 1]
+     *  </code>
+     *
+     * @return Closure
+     */
+    public function pullFirst()
+    {
+        return function (array $array, mixed $needle, bool $strict = null) {
+            if (Arr::accessible($array)) {
+                foreach ($array as $key => $value) {
+                    $isMatch = $strict ? $value === $needle : $value == $needle;
+                    if ($isMatch) {
+                        return [$key => $value];
+                    }
+                }
+            }
+
+            return [];
+        };
+    }
 }

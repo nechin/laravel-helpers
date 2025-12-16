@@ -18,7 +18,7 @@ class StrMixin
      */
     public function fileExt()
     {
-        return function(string $path) {
+        return function (string $path) {
             return pathinfo($path, PATHINFO_EXTENSION);
         };
     }
@@ -34,7 +34,7 @@ class StrMixin
      */
     public function randomParts()
     {
-        return function(int $parts, int $partLength, string $separator = '-') {
+        return function (int $parts, int $partLength, string $separator = '-') {
             if ($parts < 1 || $partLength < 1) {
                 return "";
             }

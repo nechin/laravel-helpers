@@ -21,7 +21,7 @@ class RouteMixin
      */
     public function redirectList()
     {
-        return function(array $map, int $status = 302) {
+        return function (array $map, int $status = 302) {
             foreach ($map as $old => $new) {
                 Route::redirect($old, $new, $status);
             }

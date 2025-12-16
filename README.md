@@ -21,12 +21,21 @@ Method __redirectList__ for the *Route* facade, that adds the ability to specify
 
 Method __delete__ for the *Arr* facade, that delete elements by the value
 ```php
-$array = [1, 2, 1, 3];
+$array = [1, 2, '1', 3];
 \Illuminate\Support\Arr::delete($array, 1); // [2, 3]
+\Illuminate\Support\Arr::delete($array, 1, true); // [2, '1', 3]
 ```
 
-Validator __unique_if__ in progress
+Method __pullAll__ for the *Arr* facade, that getting array elements by value
+```php
+$array = [1, 2, 'foo' => '1', 3];
+\Illuminate\Support\Arr::pullAll($array, 1); // [0 => 1, 'foo' => 1]
+\Illuminate\Support\Arr::pullAll($array, 1, true); // [0 => 1]
+```
 
-Arr __emptyAll__ in progress
-
-Arr __objToArray__ in progress
+Method __pullFirst__ for the *Arr* facade, that getting first array element by value
+```php
+$array = [1, 2, 'foo' => '3', 3];
+\Illuminate\Support\Arr::pullFirst($array, 3); // ['foo' => 3]
+\Illuminate\Support\Arr::pullFirst($array, 3, true); // [2 => 3]
+```
