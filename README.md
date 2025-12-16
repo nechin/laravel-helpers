@@ -1,4 +1,27 @@
-# Laravel helpers package that extends a different facades
+#  nechin/laravel-helpers
+[![Source Code][badge-source]][source]
+<!--  [![Latest Version][badge-release]][release]
+[![Software License][badge-license]][license]
+[![Total Downloads][badge-downloads]][downloads] -->
+
+## About
+
+Laravel helpers package that extends a different facades
+
+## Installation
+
+The preferred method of installation is via [Packagist][packagist] and [Composer][composer]. Run the following command to install the package and add it as a requirement to your project's `composer.json`:
+
+```bash
+composer require nechin/laravel-helpers
+```
+
+## Requirements
+
+Laravel 5.4
+PHP 8.0
+
+## Examples
 
 Method __fileExt__ for the *Str* facade, that return a file extension by the file path
 ```php
@@ -39,3 +62,17 @@ $array = [1, 2, 'foo' => '3', 3];
 \Illuminate\Support\Arr::pullFirst($array, 3); // ['foo' => 3]
 \Illuminate\Support\Arr::pullFirst($array, 3, true); // [2 => 3]
 ```
+
+## Copyright and license
+
+The nechin/laravel-helpers library is copyright © [Alexander Vitkalov](http://vitkalov.ru/) and licensed for use under the MIT License (MIT). Please see [LICENSE][license] for more information.
+
+[packagist]: https://packagist.org/packages/nechin/laravel-helpers
+[composer]: http://getcomposer.org/
+
+[badge-source]: https://img.shields.io/badge/source-nechin/laravel--helpers-blue
+
+[source]: https://github.com/nechin/laravel-helpers
+[release]: https://packagist.org/packages/nechin/laravel-helpers
+[license]: https://github.com/nechin/laravel-helpers/blob/master/LICENSE
+[downloads]: https://packagist.org/packages/nechin/laravel-helpers
